@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>While , encabezados</title>
+    <script>
+        function bucle() {
+            var resultado = "";
+            var texto = (document.getElementById("texto").value);
+            var x=1;
+           while(x<=6){
+        
+            resultado+= "<h"+x+">"+texto+"</h"+x+">";//no hace poner un br porque esta de manera implicita
+            x++;
+            }
+            x=6;
+            do{
+           
+                resultado+= "<h"+x+">"+texto+"</h"+x+">";
+            x--;
+            } while(x>=1);
+            
+            document.getElementById("miDiv").innerHTML = resultado;
+        }
+    </script>
+</head>
+<body>
+    <h1>While,encabezados</h1>
+    <p>Introduzca un texto cualquiera</p>
+    <input type="text" id="texto" placeholder="Introduzca un texto">
+    <button onclick="bucle()">Comprobar</button>
+    <br><p>Resultado :</p>
+    <div id="miDiv"></div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>While, descomposicion primos</title>
+    <script>
+        function bucle() {
+            var numero = parseInt(document.getElementById("numero").value);
+            var divisor=2;
+            var resultado = "El numero "+ numero +" esta descompuesto por:";
+          while(numero>1){
+                if(numero%divisor == 0){
+                    resultado += divisor + "*";
+                    numero /=divisor;
+                }else{
+                    divisor++;
+                }
+
+          }
+
+            document.getElementById("miDiv").innerHTML = resultado;
+        }
+    </script>
+</head>
+<body>
+    <h1>While, descomposicion primos</h1>
+    <p>Introduzca un número</p>
+    <input type="text" id="numero" placeholder="Introduzca un número">
+    <button onclick="bucle()">Mostrar</button>
+    <br><p>Resultado :</p>
+    <div id="miDiv"></div>
+</body>
+</html>

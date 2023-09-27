@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+<title>Eleccion Talleres</title>
+<script>
+    function eleccionTaller() {
+        var marca = (document.getElementById("coche").value).toLowerCase();//para pedir una cadena de texto y que te qa
+        var resultado;
+ switch (marca) {
+case "peugeot" : resultado="Se digira a los Talleres Alvarez";break;
+case "ford" : resultado="Se ira a los Talleres Pepito";break;
+case "citröen": resultado="Se ira a los Talleres Pardiñas";break;
+default : resultado="No es la marca indicada";
+ }
+      document.getElementById("miDiv").innerHTML= resultado;
+    }
+</script>
+</head>
+<body>
+<h1>Eleccion de talleres</h1>
+<p>Introduzca una marca:</p>
+<input type="text" id="coche" placeholder="Seleccione Ford,Citröen o Peugeot">
+<button onclick="eleccionTaller();">Consultar</button>
+<p>Resultados de la búsqueda : </p>
+    <div id="miDiv"></div>
+</body>
+</html>

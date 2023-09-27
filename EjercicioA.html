@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manejo de fechas
+    </title>
+    <script>
+        function bucle() {
+          var fechaHoy=date();
+            var resultado = "La fecha de hoy es : \t" + fechaHoy;
+        
+            document.getElementById("miDiv").innerHTML = resultado;
+        }
+    </script>
+</head>
+<body>
+    <h1>Manejo de fechas</h1>
+    <button onclick="bucle()">Mostrar</button>
+    <br><p>Resultado :</p>
+    <div id="miDiv"></div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bucles For</title>
+    <script>
+        function bucle() {
+            var resultado = "";
+            var num1 = parseInt(document.getElementById("numero1").value);
+            if (num1 >= 0 && num1 <= 10) {
+                for (var i = 1; i <= num1; i++) {
+                   for(var j=1; j<=i; j++){
+                        resultado += i;
+                    }
+                    resultado += "<br>"; // Agregamos un salto de línea después de cada serie de números
+                }
+            } else {
+                resultado = "El número introducido no es válido";
+            }
+            document.getElementById("miDiv").innerHTML = resultado; // Mostramos "Resultado:" antes de la serie de números
+        }
+    </script>
+</head>
+<body onload="mostrar();">
+    <h1>Bucle For</h1>
+    <p>Introduzca un número:</p>
+    <input type="text" id="numero1" placeholder="Introduzca un número entre el 1 y el 10">
+    <button onclick="bucle()">Comprobar</button>
+    <br><p>Resultado :</p>
+    <div id="miDiv"></div>
+</body>
+</html>

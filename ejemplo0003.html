@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hola mundo</title>
+        <script src="ejemplo0003.js"></script>
+        <script>
+            var i, j = 0;
+            for (i = 0; i < 5; i++) {
+              alert("Variable i: " + i);
+              for (j = 0; j < 5; j++) {
+                if (i % 2 === 0) {
+                  document.write(i + "-" + j + "<br>");
+                }
+              }
+            }
+          </script>
+          
+          
+        <script>
+            alert("Hola mundo en JavaScript embebido");
+            document.getElementById("miH1").innerHTML="HOLA MUNDO CABECERA DE NIVEL 1";
+            //para comentar algo en el script se pone (//)
+            //es bueno que haya tabulacion para que se vea mas organizado
+        </script>
+        <h1 onclick="alert('HOLA MUNDO NIVEL 1')">
+        HOLA MUNDO CABECERA DE NIVEL 1</h1>
+        
+    </head>
+    <body>
+        <h1 id="miH1" onclick="alert('HOLA MUNDO NIVEL 1')">
+            HOLA MUNDO CABECERA DE NIVEL 1
+        </h1>
+        
+    </body>
+</html>

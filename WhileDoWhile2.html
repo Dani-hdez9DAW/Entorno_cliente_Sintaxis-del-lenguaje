@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>While , encabezados</title>
+    <script>
+        function bucle() {
+            var resultado = "";
+            var num = (document.getElementById("numero").value);
+            var texto=(document.getElementById("texto").value);
+            var x=1;
+            if(num>=1 && num<=6){
+                while(x<=num){
+            resultado+= "<h"+x+">"+texto+"</h"+x+">";//no hace falta poner un br porque esta de manera implicita
+            x++;
+            }
+            x=num;
+            do{
+                resultado+= "<h"+x+">"+texto+"</h"+x+">";//no hace falta poner un br porque esta de manera implicita
+            x--;
+            } while(x>=1);
+            }else{
+                resultado="El número que has introducido no es valido";
+            var num = (document.getElementById("numero").value="");//lo ponemos asi para limpiar los textos una vez que se haga
+            var texto=(document.getElementById("texto").value="");
+                    }
+                    var num = (document.getElementById("numero").value="");//lo ponemos asi para limpiar los textos una vez que se haga
+            var texto=(document.getElementById("texto").value="");
+            
+            document.getElementById("miDiv").innerHTML = resultado;
+        }
+    </script>
+</head>
+<body>
+    <h1>While,encabezados</h1>
+    <p>Introduzca un texto cualquiera</p>
+    <input type="text" id="texto" placeholder="Introduzca un texto">
+    <p>Introduzca un numero entre el 1 y el 6 </p>
+    <input type="text" id="numero" placeholder="Introduzca un numero">
+    <button onclick="bucle()">Comprobar</button>
+    <br><p>Resultado :</p>
+    <div id="miDiv"></div>
+</body>
+</html>

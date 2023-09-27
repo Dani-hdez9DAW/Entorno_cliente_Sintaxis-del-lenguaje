@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Federados</title>
+    
+    <script>
+        function edadFederado() {
+            var edad = parseInt(document.getElementById("edad").value);
+            var resultado = "";
+
+            switch (edad) {
+                case 18:
+                case 17:
+                case 16:
+                    resultado = "Es un <font color='green'>Juvenil</font>";
+                    break;
+                case 15:
+                case 14:
+                    resultado = "Es un <font color='yellow'>Cadete</font>";
+                    break;
+                case 13:
+                case 12:
+                    resultado = "Es un <font color='red'>Infantil</font>";
+                    break;
+                case 11:
+                case 10:
+                    resultado = "Es un <font color='pink'>Alevín</font>";
+                    break;
+                case 9:
+                case 8:
+                    resultado = "Es un <font color='black'>Benjamín</font>";
+                    break;
+                case 7:
+                case 6:
+                case 5:
+                    resultado = "Es un <font color='purple'>Prebenjamín</font>";
+                    break;
+                default:
+                    resultado = "No perteneces al grupo";
+            }
+
+            document.getElementById("miDiv").innerHTML = resultado;
+        }
+    </script>
+</head>
+<body>
+    <h1>Búsqueda de edad Federados</h1>
+    <p>Introduzca una edad:</p>
+    <input type="text" id="edad" placeholder="Introduzca una edad">
+    <button onclick="edadFederado();">Consultar</button>
+    <p>Resultados de la búsqueda : </p>
+    <div id="miDiv"></div>
+</body>
+</html>

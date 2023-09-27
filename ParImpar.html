@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Par o Impar</title>
+    <script>
+     
+        function parimpar() {
+          
+            var num1 = parseFloat(document.getElementById("numero1").value);
+            var resultado;
+           if((num1%2)==0){
+            resultado="El numero " + num1 + " es par" ;
+           }
+           else {
+            resultado="El numero "  + num1  +  " es impar";
+                  }
+
+          document.getElementById("miDiv").innerHTML= resultado;
+        }
+    </script>
+</head>
+<body>
+    <h1>Diferencia de edad</h1>
+    <p>Introduzca un numero:</p>
+
+    <input type="text" id="numero1" placeholder="Introduzca un numero">
+
+    
+<button onclick="parimpar()">Adivinar</button>
+<br><p>Resultado : </p>
+ <div id="miDiv"></div>
+
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio PUM</title>
+    <script>
+        function bucle() {
+            var resultado = "";
+            var num1 = parseInt(document.getElementById("numero1").value);
+            
+            for (var i = 1; i <= 300; i++) {
+                if (i%10==0) { 
+                    resultado +=i;
+                  resultado+="<br> ";
+                } else if (i % 4 == 0) {
+                    resultado += "<font color='green' size='+4'>"+i+"</font> ";
+                }  else if (i % 9 == 0) {
+                    resultado += "<font color='red' size='-2'>"+i+"</font> ";
+                }else {
+                    resultado += i +" ";
+                }     
+            }
+            
+            document.getElementById("miDiv").innerHTML = resultado;
+        }
+    </script>
+</head>
+<body>
+    <h1>Ejercicio PUM</h1>
+    <p>Introduzca un número:</p>
+    <input type="text" id="numero1" placeholder="Introduzca un número entre el 1 y 100">
+    <button onclick="bucle()">Comprobar</button>
+    <br><p>Resultado :</p>
+    <div id="miDiv"></div>
+</body>
+</html>

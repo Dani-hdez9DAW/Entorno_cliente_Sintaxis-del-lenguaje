@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diferencia de edad</title>
+    <script>
+     
+        function comparar() {
+            alert("Comparando edades");
+            var num1 = parseFloat(document.getElementById("numero1").value);
+            var num2 = parseFloat(document.getElementById("numero2").value);
+            var resultado;
+           if(num1>num2){
+            resultado="Uno es mayor que dos" + "ya que uno tiene " + num1 + " años" + " y dos " + num2 + " años";
+           }
+           else if(num1<num2){
+          resultado="Dos es mayor que uno" + "ya que dos tiene " + num2 + " años" + " y uno " + num1 + " años";
+           }
+          else  if(num1==num2){
+          resultado="Tienen ambos" + num1 +"años";
+           }
+          // document.getElementById("resultado").textContent=resultado;
+          document.getElementById("miDiv").innerHTML= resultado;
+        }
+    </script>
+</head>
+<body>
+    <h1>Diferencia de edad</h1>
+    <p>Introduzca la edad de uno:</p>
+
+    <input type="text" id="numero1" placeholder="Introduzca una edad">
+    <p>Introduzca la edad de dos:</p>
+    <input type="text" id="numero2" placeholder="Introduzca una edad">
+
+    
+<button onclick="comparar()">Comparar edades</button>
+<br><p>Resultado : </p>
+ <div id="miDiv"></div>
+
+    
+</body>
+</html>

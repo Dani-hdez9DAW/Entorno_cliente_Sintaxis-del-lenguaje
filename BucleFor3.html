@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio PUM</title>
+    <script>
+        function bucle() {
+            var resultado = "";
+            var num1 = parseInt(document.getElementById("numero1").value);
+         
+                for (i = 1; i <= 100; i++) {
+                    if(i%7==0 ||  i % 10 === 7){
+                resultado+="PUM";
+                resultado+="<br>";
+                    }else{
+                        resultado += i + ", ";
+                    }
+                }
+            document.getElementById("miDiv").innerHTML = resultado;
+        }
+    </script>
+</head>
+<body>
+    <h1>Ejercicio PUM</h1>
+    <p>Introduzca un número:</p>
+    <input type="text" id="numero1" placeholder="Introduzca un número entre el 1 y 100">
+    <button onclick="bucle()">Comprobar</button>
+    <br><p>Resultado :</p>
+    <div id="miDiv"></div>
+</body>
+</html>
